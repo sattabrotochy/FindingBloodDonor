@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.okcodex.findingblooddonor">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        tools:ignore="AllowBackup">
+        <activity android:name=".Chat.ChatShowActivity"
+            android:parentActivityName=".Chat.PersonalChatActivity">
+
+        </activity>
+        <activity android:name=".Chat.FindFriendActivity" />
+        <activity
+            android:name=".PopUpActivity.MessageSendRequestActivity"
+            android:theme="@style/AppTheme.CustomTheme"
+            tools:ignore="InnerclassSeparator" />
+        <activity android:name=".Chat.PersonalChatActivity" />
+        <activity android:name=".Profile.ProfileActivity" />
+        <activity android:name=".Post.UserBloodPostActivity" />
+        <activity android:name=".Chat.ChatActivity" />
+        <activity android:name=".Post.BloodPostActivity" />
+        <activity android:name=".Profile.UserProfileActivity" />
+        <activity android:name=".Member.AllMemberActivity" />
+        <activity android:name=".Member.AddMemberActivity" />
+        <activity android:name=".SearchActivity" />
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

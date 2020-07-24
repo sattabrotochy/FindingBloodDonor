@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="#E6E7E8"
+    android:layout_margin="5dp"
+    android:layout_height="wrap_content">
+
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:background="@drawable/popupback"
+        android:gravity="center_vertical"
+        android:layout_width="match_parent"
+        android:layout_height="95dp"
+        tools:ignore="UselessParent">
+
+
+
+
+        <com.mikhaellopez.circularimageview.CircularImageView
+            android:background="@drawable/ic_user"
+            android:id="@+id/user_search_profile_image"
+            android:layout_gravity="center_vertical"
+            android:layout_width="70dp"
+            android:layout_marginStart="5dp"
+            android:layout_height="70dp">
+
+        </com.mikhaellopez.circularimageview.CircularImageView>
+
+
+        <LinearLayout
+            android:weightSum="3"
+            android:layout_marginStart="10dp"
+            android:layout_gravity="center_vertical"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            
+            
+           >
+            <LinearLayout
+                android:weightSum="5"
+                android:orientation="horizontal"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                tools:ignore="UseCompoundDrawables">
+
+                <TextView
+                    android:textColor="#000"
+                    android:text="name"
+                    android:layout_marginLeft="5dp"
+                    android:textSize="18sp"
+                    android:gravity="center_vertical"
+                    android:id="@+id/search_name"
+                    android:layout_weight="4.5"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    tools:ignore="HardcodedText,NestedWeights,RtlHardcoded">
+
+                </TextView>
+
+
+<!--                <ImageView-->
+<!--                    android:id="@+id/online_show"-->
+<!--                    android:background="#4CAF50"-->
+<!--                    android:layout_marginStart="20dp"-->
+<!--                    android:layout_width="18dp"-->
+<!--                    android:visibility="visible"-->
+<!--                    android:layout_height="18dp"-->
+<!--                    android:layout_gravity="center_vertical"-->
+<!--                    tools:ignore="ContentDescription">-->
+
+<!--                </ImageView>-->
+
+
+            </LinearLayout>
+       
+            <TextView
+                android:textColor="#514D4D"
+                android:textSize="12sp"
+                android:layout_marginLeft="5dp"
+                android:text="addresssssssssssssssss"
+                android:id="@+id/search_address"
+                android:gravity="center_vertical"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                tools:ignore="HardcodedText,RtlHardcoded">
+
+            </TextView>
+            <TextView
+                android:textColor="#61322F"
+                android:text="ssssssssssssss"
+                android:id="@+id/search_blood_donor"
+                android:layout_weight="1"
+                android:textSize="12sp"
+                android:layout_marginLeft="5dp"
+                android:gravity="center_vertical"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                tools:ignore="HardcodedText,RtlHardcoded">
+
+            </TextView>
+
+
+
+        </LinearLayout>
+
+</LinearLayout>
+
+</RelativeLayout>

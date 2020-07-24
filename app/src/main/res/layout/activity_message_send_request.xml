@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="350dp"
+    android:layout_gravity="center"
+    tools:context=".PopUpActivity.MessageSendRequestActivity">
+
+
+
+    <RelativeLayout
+        android:background="@drawable/popupback"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:ignore="UselessLeaf">
+
+
+        <com.mikhaellopez.circularimageview.CircularImageView
+            android:id="@+id/visit_profile_image"
+            android:layout_width="110dp"
+            android:layout_marginTop="15dp"
+            app:civ_border_width="0.9dp"
+            app:civ_border_color="@color/colorAccent"
+            android:layout_height="110dp"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/ic_user">
+
+        </com.mikhaellopez.circularimageview.CircularImageView>
+
+        <TextView
+            android:id="@+id/visit_user_name"
+            android:layout_width="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="User  name"
+            android:layout_below="@id/visit_profile_image"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="5dp"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:layout_height="wrap_content"
+            tools:ignore="HardcodedText" />
+
+
+        <Button
+            android:id="@+id/send_message_request_button"
+            android:layout_below="@id/visit_user_name"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="65dp"
+            android:layout_marginRight="65dp"
+            android:background="@drawable/singinbuttonback"
+            android:textColor="@android:color/background_light"
+            android:textSize="18sp"
+            android:text="Send Message"
+            android:textAllCaps="false"
+            android:textStyle="bold"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:ignore="HardcodedText" />
+
+        <Button
+            android:id="@+id/decline_message_request_button"
+            android:layout_below="@id/send_message_request_button"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="65dp"
+            android:layout_marginRight="65dp"
+            android:background="@drawable/singinbuttonback"
+            android:textColor="@android:color/background_light"
+            android:textSize="20sp"
+            android:text="Cancel chat request"
+            android:textAllCaps="false"
+            android:textStyle="bold"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:ignore="HardcodedText"
+            android:visibility="invisible"/>
+
+        <TextView
+
+
+            android:layout_marginTop="30dp"
+            android:id="@+id/cancel_button_id"
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/popupback"
+            android:padding="5dp"
+            android:layout_below="@+id/decline_message_request_button"
+            android:layout_alignParentRight="true"
+            android:text="  Cancel  "
+            android:textColor="#000"
+            android:textSize="20sp"
+            tools:ignore="HardcodedText,RtlHardcoded">
+
+        </TextView>
+
+
+
+
+
+
+    </RelativeLayout>
+
+
+</androidx.cardview.widget.CardView>

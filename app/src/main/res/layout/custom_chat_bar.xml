@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="@color/colorPrimary"
+    android:layout_height="match_parent">
+
+    <com.mikhaellopez.circularimageview.CircularImageView
+        android:layout_width="45dp"
+        android:src="@drawable/ic_user"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:id="@+id/custom_profile_image"
+        android:cropToPadding="true"
+        android:layout_marginRight="10dp"
+        android:layout_height="45dp"/>
+
+
+    <TextView
+        android:id="@+id/custom_profile_name"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="dislplay username"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:textColor="@android:color/background_light"
+        />
+    <TextView
+        android:id="@+id/custom_user_last_seen"
+        android:layout_below="@id/custom_profile_name"
+        android:layout_alignParentStart="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="last seen"
+        android:textStyle="bold"
+        android:textColor="@android:color/background_light"
+        />
+
+</RelativeLayout>

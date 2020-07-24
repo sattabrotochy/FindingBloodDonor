@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <com.mikhaellopez.circularimageview.CircularImageView
+        android:layout_marginTop="10dp"
+        android:src="@drawable/ic_user"
+        android:id="@+id/message_profile_image"
+        android:layout_width="45dp"
+        android:layout_height="45dp">
+
+    </com.mikhaellopez.circularimageview.CircularImageView>
+
+    <TextView
+        android:id="@+id/receiver_message_text"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="10dp"
+        android:layout_toEndOf="@+id/message_profile_image"
+        android:layout_width="wrap_content"
+        android:text="Receiver message "
+        android:padding="10dp"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:textColor="#000"
+        android:layout_height="wrap_content"
+        tools:ignore="HardcodedText">
+
+    </TextView>
+    <TextView
+        android:id="@+id/sender_message_text"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/receiver_message_text"
+        android:layout_marginTop="10dp"
+        android:layout_width="wrap_content"
+        android:text="sender message "
+        android:padding="10dp"
+        android:textColor="#000"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:layout_height="wrap_content"
+        tools:ignore="HardcodedText">
+
+    </TextView>
+
+
+
+
+</RelativeLayout>

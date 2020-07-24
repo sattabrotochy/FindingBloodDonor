@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Chat.ChatActivity">
+
+
+    <ImageView
+        android:id="@+id/logoId"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/ic_singin_icon"
+        android:layout_width="110dp"
+        android:layout_height="110dp"
+        tools:ignore="ContentDescription">
+
+    </ImageView>
+
+
+    <TextView
+        android:id="@+id/welcomeId"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/logoId"
+        android:layout_marginTop="15dp"
+        android:textAlignment="center"
+        android:text="  Welcome to Finding Blood Donor  "
+        android:textSize="28sp"
+        android:textColor="#F44336"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:ignore="HardcodedText">
+
+    </TextView>
+
+
+
+
+    <com.google.android.material.textfield.TextInputLayout
+
+        android:layout_above="@id/text_user_password"
+        android:layout_width="match_parent"
+        android:layout_gravity="center"
+        android:layout_marginBottom="20dp"
+        android:layout_height="60dp">
+
+        <EditText
+            android:inputType="textEmailAddress"
+            android:id="@+id/chat_edTxtUserEmail"
+            android:textSize="15sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:textColor="#000"
+            android:ems="12"
+            android:layout_marginStart="10dp"
+            android:hint="ব্যাবর্হায নাম (user name)  "
+            tools:ignore="Autofill,HardcodedText,TextFields" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/text_user_password"
+        android:layout_above="@id/chat_singIn_button"
+        android:layout_width="match_parent"
+        android:layout_gravity="center"
+        android:layout_marginBottom="20dp"
+        android:layout_height="60dp">
+
+        <EditText
+            android:inputType="textPassword"
+            android:id="@+id/chat_edTxt_User_Password"
+            android:textSize="15sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:textColor="#000"
+            android:ems="12"
+            android:layout_marginStart="10dp"
+            android:hint="  পাসওয়ার্ড "
+            tools:ignore="Autofill,HardcodedText,TextFields" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <Button
+        android:id="@+id/chat_singIn_button"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:text="SING IN"
+        android:textAllCaps="true"
+        android:textSize="20sp"
+        android:layout_marginBottom="30dp"
+        android:textColor="#ffffff"
+        android:background="@drawable/singinbuttonback"
+        android:layout_marginTop="25dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:ignore="HardcodedText">
+
+    </Button>
+
+
+
+</RelativeLayout>

@@ -1,0 +1,691 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#CFD8DC"
+    tools:context=".MainActivity">
+
+
+
+
+    <LinearLayout
+        android:background="@color/colorAccent"
+        android:id="@+id/liner_layout"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:orientation="horizontal">
+
+
+        <com.mikhaellopez.circularimageview.CircularImageView
+            android:layout_gravity="center_vertical"
+            android:layout_width="50dp"
+            android:src="@drawable/ic_singin_icon"
+            android:layout_marginStart="15dp"
+            android:layout_height="50dp">
+
+        </com.mikhaellopez.circularimageview.CircularImageView>
+
+
+        <TextView
+            android:textColor="#FFF"
+            android:padding="5dp"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:text="  Finding Blood Donor  "
+            android:layout_marginStart="10dp"
+            android:layout_gravity="center_vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:ignore="HardcodedText">
+
+        </TextView>
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_below="@id/liner_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:ignore="UselessParent">
+
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:ignore="UselessLeaf">
+
+
+
+            <LinearLayout
+               android:orientation="vertical"
+                android:weightSum="2"
+                android:layout_margin="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="200dp">
+
+                <LinearLayout
+                    android:layout_weight="1"
+                    android:layout_margin="4dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp">
+
+                    <LinearLayout
+                        android:weightSum="4"
+                        android:layout_gravity="center"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        tools:ignore="DisableBaselineAlignment">
+
+
+                        <LinearLayout
+                            android:weightSum="3"
+                            android:layout_weight="1"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent">
+
+                            <TextView
+                                android:background="@drawable/blood_group_back"
+                                android:text="A+"
+                                android:textSize="18sp"
+                                android:textStyle="bold"
+
+                                android:textColor="#fff"
+                                android:gravity="center"
+                                android:layout_margin="5dp"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                tools:ignore="HardcodedText">
+
+                            </TextView>
+
+                        </LinearLayout>
+                        <LinearLayout
+
+                            android:layout_weight="1"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent">
+
+                            <TextView
+                                android:background="@drawable/blood_back_two"
+                                android:text="A-"
+                                android:textSize="18sp"
+                                android:textStyle="bold"
+                                android:textColor="#fff"
+                                android:gravity="center"
+                                android:layout_margin="5dp"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                tools:ignore="HardcodedText">
+
+                            </TextView>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_weight="1"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent">
+
+                            <TextView
+                                android:background="@drawable/blood_back_three"
+                                android:text="B+"
+                                android:textSize="18sp"
+                                android:textStyle="bold"
+                                android:textColor="#fff"
+                                android:gravity="center"
+                                android:layout_margin="5dp"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                tools:ignore="HardcodedText">
+
+                            </TextView>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_weight="1"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent">
+
+                            <TextView
+                                android:background="@drawable/blood_back_foure"
+                                android:text="B-"
+                                android:textSize="18sp"
+                                android:textStyle="bold"
+                                android:textColor="#fff"
+                                android:gravity="center"
+                                android:layout_margin="5dp"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                tools:ignore="HardcodedText">
+
+                            </TextView>
+
+                        </LinearLayout>
+
+
+
+                    </LinearLayout>
+
+
+
+                </LinearLayout>
+
+
+                 <LinearLayout
+                    android:layout_weight="1"
+                     android:layout_margin="4dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp">
+
+                     <LinearLayout
+
+                         android:weightSum="4"
+                         android:layout_width="match_parent"
+                         android:layout_height="match_parent"
+                         tools:ignore="DisableBaselineAlignment">
+
+
+                         <LinearLayout
+                             android:layout_weight="1"
+                             android:layout_width="0dp"
+                             android:layout_height="match_parent">
+
+                             <TextView
+                                 android:background="@drawable/blood_back_five"
+                                 android:text="AB+"
+                                 android:textSize="18sp"
+                                 android:textStyle="bold"
+                                 android:textColor="#fff"
+                                 android:gravity="center"
+                                 android:layout_margin="5dp"
+                                 android:layout_width="match_parent"
+                                 android:layout_height="match_parent"
+                                 tools:ignore="HardcodedText">
+
+                             </TextView>
+
+                         </LinearLayout>
+                         <LinearLayout
+                             android:layout_weight="1"
+                             android:layout_width="0dp"
+                             android:layout_height="match_parent">
+
+                             <TextView
+                                 android:background="@drawable/blood_back_six"
+                                 android:text="AB-"
+                                 android:textSize="18sp"
+                                 android:textStyle="bold"
+                                 android:textColor="#fff"
+                                 android:gravity="center"
+                                 android:layout_margin="5dp"
+                                 android:layout_width="match_parent"
+                                 android:layout_height="match_parent"
+                                 tools:ignore="HardcodedText">
+
+                             </TextView>
+
+                         </LinearLayout>
+                         <LinearLayout
+                             android:layout_weight="1"
+                             android:layout_width="0dp"
+                             android:layout_height="match_parent">
+
+                             <TextView
+                                 android:background="@drawable/blood_back_seven"
+                                 android:text="A+"
+                                 android:textSize="18sp"
+                                 android:textStyle="bold"
+                                 android:textColor="#fff"
+                                 android:gravity="center"
+                                 android:layout_margin="5dp"
+                                 android:layout_width="match_parent"
+                                 android:layout_height="match_parent"
+                                 tools:ignore="HardcodedText">
+
+                             </TextView>
+
+                         </LinearLayout>
+                         <LinearLayout
+                             android:layout_weight="1"
+                             android:layout_width="0dp"
+                             android:layout_height="match_parent">
+
+                             <TextView
+                                 android:background="@drawable/blood_back_eight"
+                                 android:text="A+"
+                                 android:textSize="18sp"
+                                 android:textStyle="bold"
+                                 android:textColor="#fff"
+                                 android:gravity="center"
+                                 android:layout_margin="5dp"
+                                 android:layout_width="match_parent"
+                                 android:layout_height="match_parent"
+                                 tools:ignore="HardcodedText">
+
+                             </TextView>
+
+                         </LinearLayout>
+
+
+                     </LinearLayout>
+
+
+
+                </LinearLayout>
+
+
+
+            </LinearLayout>
+
+
+
+
+            <LinearLayout
+                android:background="@drawable/text_back"
+               android:layout_marginStart="10dp"
+               android:layout_marginEnd="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:ignore="Orientation">
+
+
+                <TextView
+                    android:id="@+id/userCount"
+                    android:layout_margin="5dp"
+                    android:textColor="#423F3F"
+                    android:padding="5dp"
+                    android:textAlignment="center"
+                    android:text="সর্বমোট নিবন্ধিত রক্তদাতা : "
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    tools:ignore="HardcodedText">
+
+                </TextView>
+                <TextView
+                    android:visibility="invisible"
+                    android:id="@+id/Yes"
+                    android:text="Yes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    tools:ignore="HardcodedText">
+
+                </TextView> <TextView
+                    android:visibility="invisible"
+                    android:text="No"
+                    android:id="@+id/No"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                tools:ignore="HardcodedText">
+
+                </TextView>
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_marginTop="10dp"
+                android:background="#ffffff"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+
+
+
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:background="#ffffff"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                tools:ignore="DisableBaselineAlignment">
+
+
+                <LinearLayout
+
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:orientation="vertical"
+                    android:layout_height="match_parent">
+
+
+                    <LinearLayout
+                        android:id="@+id/search_blood_donor"
+                        android:background="@drawable/prodfile_design"
+                        android:layout_margin="5dp"
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+
+
+                        <com.mikhaellopez.circularimageview.CircularImageView
+                            android:src="@drawable/ic_search"
+                            android:layout_marginTop="10dp"
+                            android:layout_gravity="center"
+                            android:padding="5dp"
+                            android:layout_width="130dp"
+                            android:layout_height="130dp"
+                            tools:ignore="ContentDescription,NestedWeights">
+
+                        </com.mikhaellopez.circularimageview.CircularImageView>
+
+                        <TextView
+                            android:text="রক্তদাতা অনুসন্ধান"
+                            android:textAlignment="center"
+                            android:layout_weight="1"
+                            android:layout_marginTop="5dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_horizontal"
+                            tools:ignore="HardcodedText,InefficientWeight">
+
+                        </TextView>
+
+
+                    </LinearLayout>
+
+
+
+                </LinearLayout>
+                 <LinearLayout
+                     android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent">
+
+
+                     <LinearLayout
+                         android:id="@+id/add_member"
+                         android:background="@drawable/prodfile_design"
+                         android:weightSum="5"
+                         android:layout_margin="5dp"
+                         android:layout_weight="1"
+                         android:layout_width="0dp"
+                         android:layout_gravity="center"
+                         android:orientation="vertical"
+                         android:layout_height="match_parent"
+                         tools:ignore="NestedWeights">
+
+                         <com.mikhaellopez.circularimageview.CircularImageView
+                             android:src="@drawable/ic_plus"
+                             android:layout_marginTop="10dp"
+                             android:layout_gravity="center"
+                             android:padding="5dp"
+                             android:layout_width="130dp"
+                             android:layout_height="130dp"
+                             tools:ignore="ContentDescription,NestedWeights">
+
+                         </com.mikhaellopez.circularimageview.CircularImageView>
+
+                         <TextView
+                             android:text="সদস্য হোন"
+                             android:textAlignment="center"
+                             android:layout_marginTop="5dp"
+                             android:layout_width="match_parent"
+                             android:layout_height="wrap_content"
+                             android:gravity="center_horizontal"
+                             tools:ignore="HardcodedText">
+
+                         </TextView>
+
+
+
+
+                     </LinearLayout>
+
+                </LinearLayout>
+
+
+
+            </LinearLayout>
+
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:background="#ffffff"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="180dp"
+                    tools:ignore="DisableBaselineAlignment">
+
+
+                    <LinearLayout
+
+                        android:layout_margin="5dp"
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:orientation="vertical"
+                        android:layout_height="match_parent">
+
+
+                        <LinearLayout
+                            android:id="@+id/profile"
+                            android:background="@drawable/prodfile_design"
+                            android:layout_margin="5dp"
+                            android:orientation="vertical"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+
+
+                            <com.mikhaellopez.circularimageview.CircularImageView
+                                android:src="@drawable/ic_user"
+                                android:layout_marginTop="10dp"
+                                android:layout_gravity="center"
+                                android:padding="5dp"
+                                android:layout_width="130dp"
+                                android:layout_height="130dp"
+                                tools:ignore="ContentDescription,NestedWeights">
+
+                            </com.mikhaellopez.circularimageview.CircularImageView>
+
+                            <TextView
+                                android:text="প্রোফাইল"
+                                android:textAlignment="center"
+                                android:layout_weight="1"
+                                android:layout_marginTop="5dp"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_horizontal"
+                                tools:ignore="HardcodedText,InefficientWeight">
+
+                            </TextView>
+
+
+                        </LinearLayout>
+
+
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_margin="5dp"
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent">
+
+
+                        <LinearLayout
+                            android:id="@+id/personal_chat"
+                            android:background="@drawable/prodfile_design"
+                            android:weightSum="5"
+                            android:layout_margin="5dp"
+                            android:layout_weight="1"
+                            android:layout_width="0dp"
+                            android:layout_gravity="center"
+                            android:orientation="vertical"
+                            android:layout_height="match_parent"
+                            tools:ignore="NestedWeights">
+
+
+                            <com.mikhaellopez.circularimageview.CircularImageView
+                                android:src="@drawable/ic_personal_assistant"
+                                android:layout_marginTop="10dp"
+                                android:layout_gravity="center"
+                                android:padding="5dp"
+                                android:layout_width="130dp"
+                                android:layout_height="130dp"
+                                tools:ignore="ContentDescription,NestedWeights">
+
+                            </com.mikhaellopez.circularimageview.CircularImageView>
+
+                            <TextView
+                                android:text="ব্যক্তিগত চ্যাট"
+                                android:textAlignment="center"
+                                android:layout_marginTop="5dp"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_horizontal"
+                                tools:ignore="HardcodedText">
+
+                            </TextView>
+
+
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/linerId"
+                    android:orientation="horizontal"
+                    android:background="#ffffff"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="180dp"
+                    tools:ignore="DisableBaselineAlignment">
+
+
+                    <LinearLayout
+
+                        android:layout_margin="5dp"
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:orientation="vertical"
+                        android:layout_height="match_parent">
+
+
+                        <LinearLayout
+                            android:id="@+id/all_member"
+                            android:background="@drawable/prodfile_design"
+                            android:layout_margin="5dp"
+                            android:orientation="vertical"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+
+
+                            <com.mikhaellopez.circularimageview.CircularImageView
+                                android:src="@drawable/ic_group"
+                                android:layout_marginTop="10dp"
+                                android:layout_gravity="center"
+                                android:padding="5dp"
+                                android:layout_width="130dp"
+                                android:layout_height="130dp"
+                                tools:ignore="ContentDescription,NestedWeights">
+
+                            </com.mikhaellopez.circularimageview.CircularImageView>
+
+                            <TextView
+                                android:text="সব সদস্য"
+                                android:textAlignment="center"
+                                android:layout_weight="1"
+                                android:layout_marginTop="5dp"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_horizontal"
+                                tools:ignore="HardcodedText,InefficientWeight">
+
+                            </TextView>
+
+
+                        </LinearLayout>
+
+
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_margin="5dp"
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent">
+
+
+                        <LinearLayout
+                            android:id="@+id/blood_need_post"
+                            android:background="@drawable/prodfile_design"
+                            android:weightSum="5"
+                            android:layout_margin="5dp"
+                            android:layout_weight="1"
+                            android:layout_width="0dp"
+                            android:layout_gravity="center"
+                            android:orientation="vertical"
+                            android:layout_height="match_parent"
+                            tools:ignore="NestedWeights">
+
+
+
+                            <com.mikhaellopez.circularimageview.CircularImageView
+                                android:src="@drawable/ic_heart"
+                                android:layout_marginTop="10dp"
+                                android:layout_gravity="center"
+                                android:padding="5dp"
+                                android:layout_width="130dp"
+                                android:layout_height="130dp"
+                                tools:ignore="ContentDescription,NestedWeights">
+
+                            </com.mikhaellopez.circularimageview.CircularImageView>
+
+                            <TextView
+                                android:text="রক্তের জন্য পোস্ট দিন"
+                                android:textAlignment="center"
+                                android:layout_marginTop="5dp"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_horizontal"
+                                tools:ignore="HardcodedText">
+
+                            </TextView>
+
+
+
+
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+
+
+                </LinearLayout>
+
+
+
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</RelativeLayout>

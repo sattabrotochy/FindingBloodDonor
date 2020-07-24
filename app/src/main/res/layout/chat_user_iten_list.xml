@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:orientation="horizontal"
+        tools:ignore="UselessParent">
+        <com.mikhaellopez.circularimageview.CircularImageView
+            android:layout_width="85dp"
+            android:src="@drawable/ic_user"
+            android:id="@+id/users_profile_image"
+            android:layout_height="85dp">
+
+
+
+        </com.mikhaellopez.circularimageview.CircularImageView>
+
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                tools:ignore="UseCompoundDrawables">
+                <TextView
+                    android:id="@+id/user_profile_name"
+                    android:layout_width="250dp"
+                    android:text="User Name"
+                    android:textAlignment="textStart"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:layout_marginLeft="15dp"
+                    android:layout_height="wrap_content"
+                    tools:ignore="HardcodedText,RtlHardcoded">
+
+                </TextView>
+                <ImageView
+                    android:id="@+id/user_online_status"
+                    android:layout_marginTop="5dp"
+                    android:src="@drawable/online"
+                    android:layout_width="18dp"
+                    android:visibility="invisible"
+                    android:layout_height="18dp"
+                    tools:ignore="ContentDescription" />
+
+            </LinearLayout>
+
+
+            <TextView
+                android:id="@+id/user_address"
+                android:layout_width="match_parent"
+                android:text="User status"
+                android:layout_marginLeft="15dp"
+                android:textAlignment="textStart"
+                android:textSize="16sp"
+                android:layout_height="wrap_content"
+                tools:ignore="HardcodedText,RtlHardcoded">
+
+            </TextView>
+
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <Button
+                    android:text="Accept"
+                    android:layout_marginLeft="10dp"
+                    android:textSize="16sp"
+                    android:textAllCaps="false"
+                    android:background="@android:color/holo_green_light"
+                    android:id="@+id/request_accept_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+
+                    tools:ignore="ButtonStyle,HardcodedText,RtlHardcoded" />
+
+                <Button
+                    android:text="Cancel"
+                    android:textSize="16sp"
+                    android:layout_marginStart="15dp"
+                    android:textColor="@android:color/background_light"
+                    android:textAllCaps="false"
+                    android:background="@android:color/holo_red_dark"
+                    android:id="@+id/request_cancel_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+
+                    tools:ignore="ButtonOrder,ButtonStyle,HardcodedText" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

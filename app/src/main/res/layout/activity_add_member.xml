@@ -1,0 +1,470 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Member.AddMemberActivity">
+
+
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_margin="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:ignore="ExtraText,ScrollViewSize,UselessLeaf">
+
+
+            <com.mikhaellopez.circularimageview.CircularImageView
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/ic_plus"
+                android:layout_width="130dp"
+                android:id="@+id/profile_image"
+                app:civ_border="true"
+                app:civ_border_width="0.7dp"
+                app:civ_border_color="@color/colorAccent"
+                android:layout_height="130dp">
+
+            </com.mikhaellopez.circularimageview.CircularImageView>
+
+            <LinearLayout
+                android:layout_margin="7dp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                tools:ignore="UselessLeaf,UselessParent">
+
+
+                <ImageView
+                    android:src="@drawable/ic_nameuser"
+                    android:layout_gravity="center_vertical"
+                    android:layout_width="25dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_height="25dp"
+                    tools:ignore="ContentDescription">
+
+
+                </ImageView>
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/username_text_input_layout"
+                    android:layout_width="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_height="wrap_content">
+
+                    <EditText
+                        android:inputType="text"
+                        android:id="@+id/edTxtUsername"
+                        android:textSize="13sp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:textColor="#000"
+                        android:ems="12"
+                        android:layout_marginStart="10dp"
+                        android:hint="নাম "
+                        tools:ignore="Autofill,HardcodedText,TextFields" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+
+            </LinearLayout>
+
+
+            // 2
+            //
+            <LinearLayout
+                android:layout_margin="7dp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                tools:ignore="UselessLeaf,UselessParent">
+
+
+                <ImageView
+                    android:src="@drawable/ic_location"
+                    android:layout_gravity="center_vertical"
+                    android:layout_width="30dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_height="30dp"
+                    tools:ignore="ContentDescription">
+
+
+                </ImageView>
+                <com.google.android.material.textfield.TextInputLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_height="wrap_content">
+
+                    <EditText
+                        android:id="@+id/edTxtUserAddress"
+                        android:textSize="13sp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:textColor="#000"
+                        android:ems="12"
+                        android:layout_marginStart="10dp"
+                        android:hint="বর্তমান ঠিকানা  "
+                        tools:ignore="Autofill,HardcodedText,TextFields" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+
+            </LinearLayout>
+            //3
+            <LinearLayout
+                android:layout_margin="7dp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                tools:ignore="UselessLeaf,UselessParent">
+
+
+                <ImageView
+                    android:src="@drawable/ic_nameuser"
+                    android:layout_gravity="center_vertical"
+                    android:layout_width="25dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_height="25dp"
+                    tools:ignore="ContentDescription">
+
+
+                </ImageView>
+                <com.google.android.material.textfield.TextInputLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_height="wrap_content">
+
+                    <EditText
+                        android:inputType="textEmailAddress"
+                        android:id="@+id/edTxtUserEmail"
+                        android:textSize="13sp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:textColor="#000"
+                        android:ems="12"
+                        android:layout_marginStart="10dp"
+                        android:hint="ব্যাবর্হায নাম (user name)  "
+                        tools:ignore="Autofill,HardcodedText,TextFields" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+
+            </LinearLayout>
+
+            //4
+
+            <LinearLayout
+                android:layout_margin="7dp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                tools:ignore="UselessLeaf,UselessParent">
+
+
+                <ImageView
+                    android:src="@drawable/ic_password"
+                    android:layout_gravity="center_vertical"
+                    android:layout_width="25dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_height="25dp"
+                    tools:ignore="ContentDescription">
+
+
+                </ImageView>
+                <com.google.android.material.textfield.TextInputLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_height="wrap_content">
+
+                    <EditText
+                        android:inputType="textPassword"
+                        android:id="@+id/edTxtUserPassword"
+                        android:textSize="13sp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:textColor="#000"
+                        android:ems="12"
+                        android:layout_marginStart="10dp"
+                        android:hint="পাসওয়ার্ড "
+                        tools:ignore="Autofill,HardcodedText,TextFields" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+
+            </LinearLayout>
+
+
+            //5
+
+            <LinearLayout
+                android:layout_margin="7dp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                tools:ignore="UseCompoundDrawables,UselessLeaf,UselessParent">
+
+
+                <ImageView
+                    android:src="@drawable/ic_event"
+                    android:layout_gravity="center_vertical"
+                    android:layout_width="25dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_height="25dp"
+                    tools:ignore="ContentDescription">
+
+
+                </ImageView>
+
+
+                <TextView
+                    android:id="@+id/txt_user_last_blood_date"
+                    android:padding="5dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="5dp"
+                    android:textSize="13sp"
+                    android:text="সর্বশেষ  রক্তদানের তারিখ :"
+                    android:layout_gravity="center_vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    tools:ignore="HardcodedText">
+
+                </TextView>
+
+            </LinearLayout>
+
+            //last
+
+<!--            <LinearLayout-->
+<!--                android:layout_margin="7dp"-->
+<!--                android:orientation="horizontal"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="60dp"-->
+<!--                tools:ignore="UseCompoundDrawables,UselessLeaf,UselessParent">-->
+
+
+<!--                <ImageView-->
+<!--                    android:src="@drawable/ic_event"-->
+<!--                    android:layout_gravity="center_vertical"-->
+<!--                    android:layout_width="25dp"-->
+<!--                    android:layout_marginTop="5dp"-->
+<!--                    android:layout_height="25dp"-->
+<!--                    tools:ignore="ContentDescription">-->
+
+
+<!--                </ImageView>-->
+
+
+<!--                <TextView-->
+<!--                    android:id="@+id/txt_date_of_barth"-->
+<!--                    android:padding="5dp"-->
+<!--                    android:layout_marginStart="10dp"-->
+<!--                    android:layout_marginTop="5dp"-->
+<!--                    android:textSize="13sp"-->
+<!--                    android:text="জন্ম তারিখ:"-->
+<!--                    android:layout_gravity="center_vertical"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    tools:ignore="HardcodedText">-->
+
+<!--                </TextView>-->
+
+<!--            </LinearLayout>-->
+
+
+
+            //6
+
+            <LinearLayout
+                android:layout_margin="7dp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                tools:ignore="UselessLeaf,UselessParent">
+
+
+                <ImageView
+                    android:src="@drawable/ic_gender"
+                    android:layout_gravity="center_vertical"
+                    android:layout_width="30dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_height="30dp"
+                    tools:ignore="ContentDescription">
+
+
+                </ImageView>
+
+
+
+                <RadioGroup
+                    android:orientation="horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginStart="10dp"
+                    android:id="@+id/radioGroup">
+                    <RadioButton
+                        android:id="@+id/woman_Radio_button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="মহিলা"
+                        android:padding="5dp"
+                        android:onClick="checkButton"
+                        android:textSize="13sp"
+                        android:checked="true"
+                        tools:ignore="HardcodedText" />
+                    <RadioButton
+                        android:id="@+id/man_Radio_button"
+                        android:padding="5dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="পুরুষ"
+                        android:onClick="checkButton"
+                        tools:ignore="HardcodedText" />
+
+                </RadioGroup>
+
+
+            </LinearLayout>
+            //7
+
+            <LinearLayout
+                android:layout_margin="7dp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                tools:ignore="UselessLeaf,UselessParent">
+
+
+                <ImageView
+                    android:src="@drawable/ic_phone"
+                    android:layout_gravity="center_vertical"
+                    android:layout_width="25dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_height="25dp"
+                    tools:ignore="ContentDescription">
+
+
+                </ImageView>
+                <com.google.android.material.textfield.TextInputLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_height="wrap_content">
+
+                    <EditText
+                        android:inputType="number"
+                        android:id="@+id/edTxtUserPhoneNumber"
+                        android:textSize="13sp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:textColor="#000"
+                        android:ems="12"
+                        android:layout_marginStart="10dp"
+                        android:hint="ফোন নম্বর "
+                        tools:ignore="Autofill,HardcodedText,TextFields" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+
+            </LinearLayout>
+            //8
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_margin="7dp"
+                android:id="@+id/liner_layout"
+                android:layout_height="60dp">
+
+                <ImageView
+                    android:src="@drawable/ic_blood"
+                    android:layout_gravity="center_vertical"
+                    android:layout_width="25dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_height="25dp"
+                    tools:ignore="ContentDescription"/>
+
+                <TextView
+                    android:id="@+id/txt_blood_group"
+                    android:padding="5dp"
+                    android:text="রক্তের গ্রুপ  "
+                    android:layout_gravity="center_vertical"
+                    android:textSize="13sp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_width="0dp"
+                    android:layout_weight="2"
+                    android:layout_height="wrap_content"
+                    tools:ignore="HardcodedText,RtlHardcoded">
+                </TextView>
+
+                <Spinner
+                    android:padding="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_gravity="center_vertical"
+                    android:id="@+id/spinner_blood_group_name"
+                    android:textSize="13sp"
+                    android:layout_weight="3"
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    >
+                </Spinner>
+
+            </LinearLayout>
+
+
+            //8
+            <Button
+                android:textColor="#ffffff"
+                android:text="Upload"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:textSize="20sp"
+                android:layout_gravity="center"
+                android:id="@+id/update_button"
+                android:background="@drawable/singinbuttonback"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:ignore="HardcodedText">
+
+            </Button>
+
+
+
+
+
+
+
+        </LinearLayout>
+
+
+
+    </ScrollView>
+
+</RelativeLayout>

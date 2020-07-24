@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Member.AllMemberActivity">
+
+
+
+
+
+
+    <LinearLayout
+        android:weightSum="6"
+        android:background="@color/colorAccent"
+        android:id="@+id/liner_layout2"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        tools:ignore="ExtraText">
+
+
+
+
+       //-01620002795
+
+        <EditText
+            android:id="@+id/edText_search_all_member"
+            android:textColor="#000"
+            android:textSize="15sp"
+            android:padding="7dp"
+            android:hint="    Search here...."
+            android:background="@drawable/search_back"
+            android:layout_marginStart="10dp"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="4.5"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            tools:ignore="Autofill,HardcodedText,LabelFor,TextFields">
+
+        </EditText>
+
+
+
+        <LinearLayout
+            android:layout_weight="1.5"
+            android:layout_width="0dp"
+            android:gravity="center"
+            android:layout_height="match_parent"
+            tools:ignore="UselessLeaf">
+
+            <ImageButton
+                android:id="@+id/search_image_button"
+                android:src="@drawable/icccc_search"
+                android:layout_gravity="center"
+                android:background="@drawable/imagebutton"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                tools:ignore="ContentDescription">
+
+            </ImageButton>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_below="@+id/liner_layout2"
+        android:id="@+id/recyclView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+</RelativeLayout>
