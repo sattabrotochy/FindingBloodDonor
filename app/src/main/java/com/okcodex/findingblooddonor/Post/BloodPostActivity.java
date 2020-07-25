@@ -64,19 +64,22 @@ public class BloodPostActivity extends AppCompatActivity {
         postRef = FirebaseDatabase.getInstance().getReference().child("BloodPost");
         userRef = FirebaseDatabase.getInstance().getReference().child("MyUser");
         likesRef = FirebaseDatabase.getInstance().getReference().child("Likes");
-
+        mAuth=FirebaseAuth.getInstance();
+        currentUserId=mAuth.getCurrentUser().getUid();
 
 
         postData.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(context, UserBloodPostActivity.class));
+                finish();
             }
         });
         backButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(context, MainActivity.class));
+                finish();
             }
         });
 
@@ -88,9 +91,12 @@ public class BloodPostActivity extends AppCompatActivity {
 
     {
 
+        Query query=postRef.orderByChild("count");
+
+
         FirebaseRecyclerOptions<PostList> options=
                 new FirebaseRecyclerOptions.Builder<PostList>()
-                .setQuery(postRef,PostList.class)
+                .setQuery(query,PostList.class)
                 .build();
 
      FirebaseRecyclerAdapter<PostList,postViewHolder> firebaseRecyclerAdapter=
@@ -100,6 +106,8 @@ public class BloodPostActivity extends AppCompatActivity {
                  {
 
                      final String postkey=getRef(i).getKey();
+
+                     holder.likesButtonstatus(postkey);
 
                      holder.name.setText(model.postUsername);
                      holder.date.setText(model.date);
@@ -119,11 +127,22 @@ public class BloodPostActivity extends AppCompatActivity {
                                  @Override
                                  public void onDataChange(@NonNull DataSnapshot snapshot)
                                  {
-                                     if (snapshot.child(postkey).hasChild(currentUserId))
-                                     {
+                                   if (likeChecker.equals(true))
+                                   {
+                                       if (snapshot.child(postkey).hasChild(currentUserId))
+                                       {
 
-                                     }
+                                           likesRef.child(postkey).child(currentUserId).removeValue();
+                                           likeChecker=false;
+                                       }
+                                       else
+                                       {
+                                           likesRef.child(postkey).child(currentUserId).setValue(true);
+                                           likeChecker=false;
 
+                                       }
+
+                                   }
                                  }
 
                                  @Override
@@ -158,6 +177,9 @@ public class BloodPostActivity extends AppCompatActivity {
         ImageButton comment, like;
         CircularImageView imageView;
 
+        int countLikes;
+        String currentUserID;
+        DatabaseReference likesRef;
 
 
         public postViewHolder(@NonNull View itemView) {
@@ -175,11 +197,53 @@ public class BloodPostActivity extends AppCompatActivity {
             comment = itemView.findViewById(R.id.post_comment);
             like = itemView.findViewById(R.id.post_like);
 
+            likesRef=FirebaseDatabase.getInstance().getReference().child("Likes");
+            currentUserID=FirebaseAuth.getInstance().getCurrentUser().getUid();
             //likeShow
             likesView = itemView.findViewById(R.id.liks_show_view);
         }
+
+        public void likesButtonstatus(final String postkey)
+        {
+
+            likesRef.addValueEventListener(new ValueEventListener() {
+                @SuppressLint("SetTextI18n")
+                @Override
+                public void onDataChange(@NonNull DataSnapshot snapshot)
+                {
+                    if (snapshot.child(postkey).hasChild(currentUserID))
+                    {
+                        countLikes = (int) snapshot.child(postkey).getChildrenCount();
+                        like.setImageResource(R.drawable.ic_likeheart);
+                        likesView.setText((Integer.toString(countLikes)+(" likes")));
+                    }
+                    else
+                    {
+                        countLikes = (int) snapshot.child(postkey).getChildrenCount();
+                        like.setImageResource(R.drawable.ic_heart_like);
+                        likesView.setText((Integer.toString(countLikes)+(" likes")));
+
+                    }
+
+
+
+
+                }
+
+                @Override
+                public void onCancelled(@NonNull DatabaseError error) {
+
+                }
+            });
+
+        }
     }
 
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        finish();
+    }
 }
 
 

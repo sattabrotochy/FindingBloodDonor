@@ -40,7 +40,7 @@ public class UserBloodPostActivity extends AppCompatActivity
     private FirebaseAuth mAuth;
     private String currentUser;
     String name,address,image,bldGroup,number,currentDate,currentTime,redomDateTime;
-   private long count=0;
+   private long postCount=0;
 
     long timeMillis;
 
@@ -58,9 +58,13 @@ public class UserBloodPostActivity extends AppCompatActivity
 
         initilizeAllData();
          timeMillis = System.currentTimeMillis();
+
+
         postButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
+
                 postData();
             }
         });
@@ -117,34 +121,42 @@ public class UserBloodPostActivity extends AppCompatActivity
 
             }
         });
+
+
+
+
+
+
     }
 
 
     private void postData()
     {
 
-        postRef.addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(@NonNull DataSnapshot snapshot)
-            {
-                if (snapshot.exists())
-                {
-                    count=snapshot.getChildrenCount();
-                    Log.d(TAG, "onDataChange: "+count);
-                }
-                else
-                {
-                    count=0;
-                }
+//        postRef.addValueEventListener(new ValueEventListener() {
+//            @Override
+//            public void onDataChange(@NonNull DataSnapshot snapshot)
+//            {
+//                if (snapshot.exists())
+//                {
+//                    postCount=snapshot.getChildrenCount();
+//                    Log.d(TAG, "onDataChange: "+postCount);
+//                }
+//                else
+//                {
+//                    postCount=0;
+//                }
+//
+//
+//            }
+//
+//            @Override
+//            public void onCancelled(@NonNull DatabaseError error) {
+//
+//            }
+//        });
+//
 
-
-            }
-
-            @Override
-            public void onCancelled(@NonNull DatabaseError error) {
-
-            }
-        });
 
         progressDialog.setTitle("Upload Your Post");
         progressDialog.setMessage("Please wait.....");
@@ -189,8 +201,6 @@ public class UserBloodPostActivity extends AppCompatActivity
         {
 
 
-           // PostList list=new PostList(currentUser,name,image,address,bldGroup,number,timeMillis,count);
-
 
 
           HashMap postmap=new HashMap();
@@ -202,29 +212,30 @@ public class UserBloodPostActivity extends AppCompatActivity
           postmap.put("postUserNUmber",number);
           postmap.put("time",currentTime);
           postmap.put("date",currentDate);
+          postmap.put("count",postCount);
 
 
 
-            postRef.child(currentUser+redomDateTime).updateChildren(postmap).addOnCompleteListener(new OnCompleteListener<Void>() {
+            postRef.push().setValue(postmap).addOnCompleteListener(new OnCompleteListener() {
                 @Override
-                public void onComplete(@NonNull Task<Void> task)
+                public void onComplete(@NonNull Task task)
                 {
+
                     if (task.isSuccessful())
                     {
                         Toast.makeText(UserBloodPostActivity.this, "Post is Done", Toast.LENGTH_SHORT).show();
                         bloodGroup.setText("");
                         bloodAddress.setText("");
                         bloodNumber.setText("");
-                        startActivity(new Intent(UserBloodPostActivity.this, BloodPostActivity.class));
+                        startActivity(new Intent(UserBloodPostActivity.this, MainActivity.class));
                         progressDialog.dismiss();
-
+                      finish();
                     }
                     else
                     {
-                        Toast.makeText(UserBloodPostActivity.this, task.getException().getMessage(), Toast.LENGTH_SHORT).show();
+                        Toast.makeText(UserBloodPostActivity.this, "oiche na", Toast.LENGTH_SHORT).show();
                         progressDialog.dismiss();
                     }
-
                 }
             });
         }

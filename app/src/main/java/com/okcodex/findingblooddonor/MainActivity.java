@@ -220,6 +220,7 @@ public class MainActivity extends AppCompatActivity {
 
         Intent intent=new Intent(context, BloodPostActivity.class);
         startActivity(intent);
+        finish();
     }
 
     private void goToAllMemberActivity()
@@ -234,6 +235,7 @@ public class MainActivity extends AppCompatActivity {
         {
             Intent intent=new Intent(context, AllMemberActivity.class);
             startActivity(intent);
+
         }
 
     }
@@ -243,6 +245,7 @@ public class MainActivity extends AppCompatActivity {
     {
         Intent intent=new Intent(context, ChatActivity.class);
         startActivity(intent);
+        finish();
 
 
     }
@@ -269,5 +272,11 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        finish();
     }
 }
