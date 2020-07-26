@@ -11,10 +11,10 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="AllowBackup">
-        <activity android:name=".Chat.ChatShowActivity"
-            android:parentActivityName=".Chat.PersonalChatActivity">
-
-        </activity>
+        <activity android:name=".Post.CommentActivity"></activity>
+        <activity
+            android:name=".Chat.ChatShowActivity"
+            android:parentActivityName=".Chat.PersonalChatActivity"></activity>
         <activity android:name=".Chat.FindFriendActivity" />
         <activity
             android:name=".PopUpActivity.MessageSendRequestActivity"

@@ -91,7 +91,7 @@ public class BloodPostActivity extends AppCompatActivity {
 
     {
 
-        Query query=postRef.orderByChild("count");
+        Query query=postRef.orderByChild("time");
 
 
         FirebaseRecyclerOptions<PostList> options=

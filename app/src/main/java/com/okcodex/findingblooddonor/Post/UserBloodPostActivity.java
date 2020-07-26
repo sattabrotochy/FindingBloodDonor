@@ -122,6 +122,29 @@ public class UserBloodPostActivity extends AppCompatActivity
             }
         });
 
+        postRef.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot)
+            {
+                if (snapshot.exists())
+                {
+                    postCount=snapshot.getChildrenCount();
+                    Log.d(TAG, "onDataChange: "+postCount);
+                }
+                else
+                {
+                    postCount=0;
+                }
+
+
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
+
 
 
 
@@ -133,29 +156,8 @@ public class UserBloodPostActivity extends AppCompatActivity
     private void postData()
     {
 
-//        postRef.addValueEventListener(new ValueEventListener() {
-//            @Override
-//            public void onDataChange(@NonNull DataSnapshot snapshot)
-//            {
-//                if (snapshot.exists())
-//                {
-//                    postCount=snapshot.getChildrenCount();
-//                    Log.d(TAG, "onDataChange: "+postCount);
-//                }
-//                else
-//                {
-//                    postCount=0;
-//                }
-//
-//
-//            }
-//
-//            @Override
-//            public void onCancelled(@NonNull DatabaseError error) {
-//
-//            }
-//        });
-//
+
+
 
 
         progressDialog.setTitle("Upload Your Post");
