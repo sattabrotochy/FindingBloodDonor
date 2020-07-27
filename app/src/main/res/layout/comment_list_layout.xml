@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+
+    android:layout_height="wrap_content">
+
+
+
+
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_margin="5dp"
+
+        android:layout_height="wrap_content"
+        tools:ignore="UselessParent">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:ignore="UselessLeaf">
+
+
+            <com.mikhaellopez.circularimageview.CircularImageView
+                android:id="@+id/commentUserImage"
+                android:layout_width="45dp"
+                android:src="@drawable/ic_user"
+                android:layout_marginStart="5dp"
+                android:layout_height="45dp">
+            </com.mikhaellopez.circularimageview.CircularImageView>
+
+
+
+            <LinearLayout
+                android:id="@+id/linerlay"
+                android:background="@drawable/comment_back"
+                android:orientation="vertical"
+                android:layout_marginStart="10dp"
+                android:layout_toRightOf="@id/commentUserImage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:ignore="RtlHardcoded">
+
+
+                <TextView
+
+                    android:id="@+id/commentUserName"
+                    android:textColor="#000"
+                    android:textStyle="bold"
+                    android:textSize="15sp"
+                    android:text="shuvo"
+                    android:padding="3dp"
+                    android:layout_marginStart="9dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    tools:ignore="HardcodedText,RtlHardcoded">
+
+                </TextView>
+
+                <TextView
+                    android:id="@+id/userComent"
+                    android:text="lalalalalalalal"
+                    android:textColor="#251C27"
+                    android:textStyle="normal"
+
+                    android:textSize="17sp"
+                    android:layout_marginStart="9dp"
+                    android:padding="3dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    tools:ignore="HardcodedText">
+
+                </TextView>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/commentTime"
+                android:layout_marginStart="15dp"
+               android:layout_below="@id/commentUserImage"
+                android:layout_toRightOf="@id/commentUserImage"
+               android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:ignore="RtlHardcoded">
+
+            </TextView>
+
+
+
+        </RelativeLayout>
+
+
+
+    </LinearLayout>
+
+</RelativeLayout>

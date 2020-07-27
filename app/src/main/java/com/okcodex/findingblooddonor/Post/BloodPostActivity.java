@@ -117,6 +117,15 @@ public class BloodPostActivity extends AppCompatActivity {
                      holder.number.setText(model.postUserNUmber);
                      Picasso.get().load(model.postUserImage).into(holder.imageView);
 
+                     holder.comment.setOnClickListener(new View.OnClickListener() {
+                         @Override
+                         public void onClick(View v) {
+                             Intent intent=new Intent(BloodPostActivity.this,CommentActivity.class);
+                             intent.putExtra("postID",postkey);
+                             startActivity(intent);
+                         }
+                     });
+
 
                      holder.like.setOnClickListener(new View.OnClickListener() {
                          @Override

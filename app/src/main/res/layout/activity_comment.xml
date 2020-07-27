@@ -1,9 +1,59 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#E8E2E2"
     tools:context=".Post.CommentActivity">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/commentList"
+        android:layout_above="@id/linerLaytout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+
+    <LinearLayout
+        android:background="@drawable/comment_back"
+        android:id="@+id/linerLaytout"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_margin="5dp"
+        tools:ignore="UselessLeaf,UselessParent">
+
+
+        <RelativeLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <EditText
+                android:id="@+id/commentEditText"
+                android:layout_toLeftOf="@id/commentSend"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:ignore="Autofill,LabelFor,RtlHardcoded,TextFields">
+
+            </EditText>
+
+            <ImageButton
+                android:id="@+id/commentSend"
+                android:src="@drawable/send_message"
+                android:layout_marginEnd="10dp"
+                android:gravity="bottom"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentEnd="true"
+                tools:ignore="ContentDescription">
+
+            </ImageButton>
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>
